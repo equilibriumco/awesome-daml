@@ -214,10 +214,10 @@ Daml packages are immutable and content-addressed, which complicates the upgrade
 
 ## Community Forums
 
-- [Canton Network Forum](https://forum.canton.network/): formerly the Daml forum, and still where the language questions get answered by people who wrote the compiler.
-- [Official Discord](https://discord.com/invite/canton): faster, less searchable.
+- [Canton Network Forum](https://forum.canton.network/): formerly the Daml forum, and still a place where the language questions get answered by people who wrote the compiler.
+- [Official Discord](https://discord.com/invite/canton).
 - [Official Telegram](https://t.me/CantonNetwork1)
-- [Stack Overflow `daml` tag](https://stackoverflow.com/questions/tagged/daml): thin, but the old answers are often still correct.
+- [Stack Overflow `daml` tag](https://stackoverflow.com/questions/tagged/daml): not active, but the old language-specific answers are often still correct.
 - [GitHub `daml` topic](https://github.com/topics/daml): for finding projects not catalogued anywhere else.
 - [Digital Asset on YouTube](https://www.youtube.com/@digitalassetcom): talks and recorded sessions.
 - [Canton Network blog](https://www.canton.network/blog)
