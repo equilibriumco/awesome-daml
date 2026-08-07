@@ -97,6 +97,10 @@ The formal model is worth reading properly. Most Daml bugs are authorization or 
 - [daml-lint](https://github.com/OpenZeppelin/daml-lint): OpenZeppelin's static analyser, doing for Daml roughly what Slither does for Solidity: unguarded division, unbounded decimals, missing `ensure` clauses. Explicitly experimental.
 - [daml.nvim](https://github.com/Sengoku11/daml.nvim): Neovim support with LSP, inline script results, and Tree-sitter highlighting. The only serious alternative to the VS Code extension.
 - [CantonTrace](https://github.com/justmert/cantontrace): local debugging UI: ACS inspector, transaction tree with per-party privacy analysis, and step-through of the Daml engine. Fills a genuine gap in the official toolchain.
+- [daml-fuzz-canton](https://github.com/fronow/daml-fuzz-canton): property-based fuzzer. You declare the invariants; it generates multi-party transaction sequences trying to break them, covering authorization, privacy, and value conservation. Proof of concept, and the invariant categories are a useful checklist even if you don't run it.
+- [Mewt](https://github.com/trailofbits/mewt): mutation testing with Daml support, including mutants that swap controllers and signatories. Reach for it when Daml's choice-level coverage says 100% and you want to know what that is worth. ([announcement](https://blog.trailofbits.com/2026/07/08/mutation-testing-comes-to-daml/))
+- [daml-security-framework](https://github.com/1D0n/daml-security-framework): proof-of-concept static scanner and a vulnerability taxonomy with worked examples, such as non-consuming choices with side effects. Early; the taxonomy currently carries more value than the scanner.
+- [Decentralization Manager](https://github.com/DLC-link/decentralization-manager): runs a decentralized party across multiple participants: threshold governance, coordinated onboarding, DAR deployment with multi-party signing, and membership votes. For when a single operator holding the party's keys is not acceptable.
 
 ## SDKs and Bindings
 
