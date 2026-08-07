@@ -30,7 +30,6 @@ The language itself barely changed between 2.x and 3.x; templates, choices, and 
 - [Upgrades and Production](#upgrades-and-production)
 - [The Canton Ecosystem](#the-canton-ecosystem)
 - [Data and Explorers](#data-and-explorers)
-- [AI-Assisted Development](#ai-assisted-development)
 - [Papers](#whitepapers-etc)
 - [Community articles](#community-articles)
 - [Community Forums](#community-forums)
