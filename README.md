@@ -104,6 +104,7 @@ The formal model is worth reading properly. Most Daml bugs are authorization or 
 - [gRPC Ledger API](https://docs.canton.network/sdks-tools/api-reference/ledger-api-services): the full API, including event streaming.
 - [Wallet SDK](https://docs.canton.network/sdks-tools/sdks/wallet-sdk): TypeScript, for party management, transfers, and transaction signing.
 - [Wallet Gateway](https://github.com/canton-network/wallet): dApp-side SDK and OpenRPC spec for talking to Canton wallets from a frontend.
+- [PartyLayer](https://github.com/PartyLayer/PartyLayer): CIP-0103 wallet abstraction. One integration covers Console, Loop, Cantor8, Nightly and the rest, with React hooks and a signed registry so wallet identities can't be spoofed. MIT. ([docs](https://partylayer.xyz))
 - [dazl](https://github.com/digital-asset/dazl-client): Python Ledger API client. ([PyPI](https://pypi.org/project/dazl/))
 - [go-daml](https://github.com/noders-team/go-daml): Go client with a type-safe code generator that reads `.dar` files.
 - [c7_ledger](https://github.com/C7-Digital/c7_ledger): actively maintained drop-in replacements for `@daml/ledger` and `@daml/react`.
@@ -114,6 +115,7 @@ The formal model is worth reading properly. Most Daml bugs are authorization or 
 - [Daml Finance](https://github.com/digital-asset/daml-finance): instruments, holdings, settlement, and lifecycling. Don't model a financial asset from scratch before reading this. ([docs](https://docs.daml.com/daml-finance/index.html))
 - [daml-ctl](https://github.com/digital-asset/daml-ctl): small control-flow helpers ported from Haskell.
 - [Canton Token Template](https://github.com/OpenZeppelin/canton-token-template): Starting point for a CIP-56 compliant token registry, by OpenZeppelin.
+- [canton-stablecoin](https://github.com/OpenZeppelin/canton-stablecoin): extends the token template above with a CDP vault system: overcollateralization, minting, liquidation, stability fees, plus tests for the security invariants. Explicitly experimental.
 - [daml-tokenization-toolkit](https://github.com/SynfiniDLT/daml-tokenization-toolkit): tokenization and settlement built on Daml Finance, by ASX Operations.
 - [account-hierarchy](https://github.com/SynfiniDLT/account-hierarchy): custody and account-hierarchy modelling for solving the nested-ownership problem.
 - [daml-nft](https://github.com/SynfiniDLT/daml-nft): small NFT library.
@@ -128,6 +130,7 @@ The formal model is worth reading properly. Most Daml bugs are authorization or 
 - [splice](https://github.com/canton-network/splice): the Global Synchronizer's own applications: Canton Coin, Scan, validator, and SV apps. For reviewing what the production-quality Daml looks like.
 - [example-insurance-claim](https://github.com/SynfiniDLT/example-insurance-claim): an insurance claim as a multi-party workflow example.
 - [canton-erc20](https://github.com/ChainSafe/canton-erc20): ERC-20 bridge between Ethereum and CIP-56 tokens, by ChainSafe. ([Go middleware](https://github.com/ChainSafe/canton-middleware))
+- [data-streams-canton](https://github.com/smartcontractkit/data-streams-canton): Chainlink Data Streams on Canton. The reference for getting external price data onto the ledger.
 - [hemera](https://github.com/liakakos/hemera): Daml-to-Ethereum integration over the Java bindings. Unmaintained since 2023, but the same pattern of offchain integrations still works.
 - [daml-on-sawtooth](https://github.com/blockchaintp/daml-on-sawtooth): Daml's runtime on Hyperledger Sawtooth. Unmaintained, but works as an example of Daml being a ledger-agnostic language.
 
@@ -211,6 +214,7 @@ Daml packages are immutable and content-addressed, which complicates the upgrade
 - [Exploring Canton Network: privacy-first distributed ledgers](https://medium.com/iobuilders/exploring-canton-network-a-deep-dive-into-privacy-first-distributed-ledgers-58046e0901a7): walkthrough of the privacy architecture.
 - [DAML Development Guide](https://pixelplex.io/blog/daml-development-guide/)
 - [Daml Masterclass](https://medium.com/daml-masterclass/full-stack-developer-happiness-a1a122ebd8de): long-running series on full-stack Daml, including [driving the ledger from Rust](https://medium.com/daml-masterclass/rust-daml-a-biz-friendly-smart-contract-platform-deserves-a-biz-friendly-client-language-ddb74922a263).
+- [Canton Network Learning Hub](https://cantonnews.org/learn): four levels of question-and-answer material, from what Canton is up to transaction mechanics and CIP-56. The developer track is levels 2 and 3.
 
 ## Community Forums
 
