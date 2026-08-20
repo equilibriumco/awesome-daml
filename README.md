@@ -7,13 +7,9 @@ Daml is a strongly-typed, Haskell-derived language for multi-party workflows. In
 
 ## Which docs site should I start with?
 
-| Site | Covers | Use it for |
-| --- | --- | --- |
-| [docs.canton.network](https://docs.canton.network/) | Daml 3.x, Canton 3.5, current tooling | Everything current. Start here. |
-| [docs.daml.com](https://docs.daml.com/) | Daml SDK 2.10.x | The older tutorials and prose, much of which has no 3.x equivalent yet |
-| [docs.digitalasset.com](https://docs.digitalasset.com/) | Digital Asset's commercial apps | Registry, USDCx |
+**The official documentation site is [docs.canton.network](https://docs.canton.network/)**. It covers Daml 3.x, Canton 3.5, and the current tooling. 
 
-The language itself barely changed between 2.x and 3.x; templates, choices, and the standard library are roughly the same. Runtime and the tooling went through some changes (especially `dpm`, which replaces the old `daml` assistant as of SDK 3.5). Read 2.x prose for the Daml language, 3.x docs for anything else you need in your development environment.
+This document also links to older documentation sites ([docs.daml.com](https://docs.daml.com) and [docs.digitalasset.com](https://docs.digitalasset.com/)), whenever they still provide somewhat relevant and useful learning material.
 
 ## Contents
 
@@ -30,6 +26,7 @@ The language itself barely changed between 2.x and 3.x; templates, choices, and 
 - [Upgrades and Production](#upgrades-and-production)
 - [The Canton Ecosystem](#the-canton-ecosystem)
 - [Data and Explorers](#data-and-explorers)
+- [Agentic Development](#agentic-development)
 - [Papers](#whitepapers-etc)
 - [Community articles](#community-articles)
 - [Community Forums](#community-forums)
@@ -48,9 +45,9 @@ The language itself barely changed between 2.x and 3.x; templates, choices, and 
 
 ## Learning the Language
 
-- [An Introduction to Daml](https://docs.daml.com/daml/intro/0_Intro.html): the long-standing tutorial course, building an asset-trading app chapter by chapter. Still the best sustained introduction to the language, though it targets 2.x tooling.
+- [An Introduction to Daml](https://docs.daml.com/daml/intro/0_Intro.html): the long-standing tutorial course, building an asset-trading app chapter by chapter. Still a fine introduction to the language, even though it targets 2.x tooling.
 - [Module 3: Daml Smart Contracts](https://docs.canton.network/appdev/modules/m3-language-fundamentals): the 3.x treatment, split across [templates](https://docs.canton.network/appdev/modules/m3-contract-templates), [choices](https://docs.canton.network/appdev/modules/m3-choices), [authorization](https://docs.canton.network/appdev/modules/m3-authorization), [interfaces](https://docs.canton.network/appdev/modules/m3-interfaces), and [contract keys](https://docs.canton.network/appdev/modules/m3-contract-keys).
-- [Composition and Design Patterns](https://docs.canton.network/appdev/modules/m3-design-patterns): propose/accept, delegation, role contracts. The idioms that separate working Daml from good Daml.
+- [Composition and Design Patterns](https://docs.canton.network/appdev/modules/m3-design-patterns): Concepts like propose/accept, delegation, role contracts that separate working Daml from elegant Daml.
 - [Daml Patterns (2.x)](https://docs.daml.com/daml/patterns.html): the original pattern catalogue, with fuller worked examples.
 - [Testing Daml Contracts](https://docs.canton.network/appdev/modules/m3-testing): Daml Script as a test harness, including multi-party scenarios.
 - [Working with Time](https://docs.canton.network/appdev/modules/m3-working-with-time): ledger time vs. record time, and why naive time handling breaks under contention.
@@ -70,7 +67,7 @@ The language itself barely changed between 2.x and 3.x; templates, choices, and 
 
 ## The Ledger Model
 
-The formal model is worth reading properly. Most Daml bugs are authorization or privacy misunderstandings, not syntax errors.
+The formal model is worth reading properly, especially the authorization and privacy parts.
 
 - [The Ledger Model](https://docs.canton.network/overview/learn/ledger-model): transactions as trees, with authorization rules over the nodes.
 - [Privacy Model Explained](https://docs.canton.network/overview/learn/privacy-model): subtransaction privacy i.e. who learns which parts of a transaction, and why.
@@ -82,6 +79,8 @@ The formal model is worth reading properly. Most Daml bugs are authorization or 
 - [Explicit Contract Disclosure](https://docs.canton.network/appdev/deep-dives/explicit-contract-disclosure): handing a contract to a non-stakeholder without making them an observer.
 
 ## Tooling
+
+Check the [official Canton developer tooling site](https://dev-hub.canton.foundation/) first. Developer tools, SDKs, APIs, and AI Infrastructure for Building on Canton Network. To get your projects included, [their repo](https://github.com/canton-network-devs/Canton-Developer-Hub) is open to PRs.
 
 - [dpm](https://docs.canton.network/sdks-tools/cli-tools/dpm): the CLI: scaffolding, builds, tests, codegen, SDK version management. Replaces the `daml` assistant from SDK 3.5 on. ([repo](https://github.com/digital-asset/dpm))
 - [Daml SDK](https://docs.canton.network/sdks-tools/sdks/daml-sdk): compiler, Daml Script runner, and sandbox, installed via `dpm`.
@@ -165,7 +164,6 @@ Daml packages are immutable and content-addressed, which complicates the upgrade
 - [Canton Network](https://www.canton.network/): the network itself, and [its problem statement](https://docs.canton.network/overview/understand/the-problem).
 - [Canton Network in 5 Minutes](https://docs.canton.network/overview/understand/five-minute-overview): tldr.
 - [Glossary](https://docs.canton.network/overview/understand/glossary)
-- [Canton Developer Hub](https://dev-hub.canton.foundation/): the Foundation's catalogue of tools and SDKs, open to PRs. ([repo](https://github.com/canton-network-devs/Canton-Developer-Hub))
 - [Canton Improvement Proposals](https://github.com/canton-foundation/cips): where protocol and standard proposals are developed. For instance, [CIP-56](https://github.com/canton-foundation/cips/blob/main/cip-0056/cip-0056.md) defines the token standard.
 - [Token Standard](https://docs.canton.network/appdev/deep-dives/token-standard): about the CIP-56.
 - [Canton Foundation](https://canton.foundation/): governance, plus their [grants program](https://canton.foundation/grants-program/).
