@@ -99,6 +99,7 @@ Check the [official Canton developer tooling site](https://dev-hub.canton.founda
 - [Mewt](https://github.com/trailofbits/mewt): mutation testing with Daml support, including mutants that swap controllers and signatories. Reach for it when Daml's choice-level coverage says 100% and you want to know what that is worth. ([announcement](https://blog.trailofbits.com/2026/07/08/mutation-testing-comes-to-daml/))
 - [daml-security-framework](https://github.com/1D0n/daml-security-framework): proof-of-concept static scanner and a vulnerability taxonomy with worked examples, such as non-consuming choices with side effects. Early; the taxonomy currently carries more value than the scanner.
 - [Decentralization Manager](https://github.com/DLC-link/decentralization-manager): runs a decentralized party across multiple participants: threshold governance, coordinated onboarding, DAR deployment with multi-party signing, and membership votes. For when a single operator holding the party's keys is not acceptable.
+- [Canton Security 101](https://scauditstudio.com/tools/canton-security101): A Canton-focused cybersecurity guide covering DAML development, web applications, and operational security. Learn about secure dapp development.
 
 ## SDKs and Bindings
 
