@@ -1,15 +1,14 @@
 # Awesome Daml [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> Curated resources for learning [Daml](https://docs.canton.network/) the smart contract language behind the Canton Network and for finding your way around the Canton developer ecosystem.
+> Curated resources for learning [Daml](https://docs.canton.network/), the smart contract language behind the Canton Network, and for finding your way around the Canton developer ecosystem.
 
-Daml is a strongly-typed, Haskell-derived language for multi-party workflows. Instead of a global shared state, every contract carries an explicit set of signatories and observers, so who is allowed to see and do what is part of the type-checked model rather than an afterthought. That model is what Canton executes and synchronizes across independently-operated participant nodes.
-
+Daml is a strongly typed, Haskell-derived language for multi-party workflows. Instead of a global shared state, every contract carries an explicit set of signatories and observers, so who is allowed to see and do what is part of the type-checked model rather than an afterthought. That model is what Canton executes and synchronizes across independently operated participant nodes.
 
 ## Which docs site should I start with?
 
-**The official documentation site is [docs.canton.network](https://docs.canton.network/)**. It covers Daml 3.x, Canton 3.5, and the current tooling. 
+**The official documentation site is [docs.canton.network](https://docs.canton.network/)**. It covers Daml 3.x, Canton 3.5, and the current tooling.
 
-This document also links to older documentation sites ([docs.daml.com](https://docs.daml.com) and [docs.digitalasset.com](https://docs.digitalasset.com/)), whenever they still provide somewhat relevant and useful learning material.
+This document also links to older documentation sites ([docs.daml.com](https://docs.daml.com) and [docs.digitalasset.com](https://docs.digitalasset.com/)) whenever they still provide somewhat relevant and useful learning material.
 
 ## Contents
 
@@ -40,26 +39,25 @@ This document also links to older documentation sites ([docs.daml.com](https://d
 ### Coming from Ethereum?
 
 - [Canton for Blockchain Developers](https://docs.canton.network/appdev/modules/m2-canton-for-ethereum-devs): written for people arriving from EVM/Solidity. Focus on the privacy and authorization sections.
-- [Concept Translation Tables](https://docs.canton.network/appdev/modules/m2-concept-translation): mapping the terminology and the concepts between the two. 
+- [Concept Translation Tables](https://docs.canton.network/appdev/modules/m2-concept-translation): mapping the terminology and the concepts between the two.
 - [Canton + Daml Auditor Bootcamp](https://github.com/gdroz3r/Canton-daml-auditor-bootcamp): aimed at auditors arriving from EVM or Move, organized around twenty recurring Daml vulnerability patterns with code for each. Also the fastest way for a non-auditor to learn what bad Daml looks like.
 
 ## Learning the Language
 
 - [An Introduction to Daml](https://docs.daml.com/daml/intro/0_Intro.html): the long-standing tutorial course, building an asset-trading app chapter by chapter. Still a fine introduction to the language, even though it targets 2.x tooling.
 - [Module 3: Daml Smart Contracts](https://docs.canton.network/appdev/modules/m3-language-fundamentals): the 3.x treatment, split across [templates](https://docs.canton.network/appdev/modules/m3-contract-templates), [choices](https://docs.canton.network/appdev/modules/m3-choices), [authorization](https://docs.canton.network/appdev/modules/m3-authorization), [interfaces](https://docs.canton.network/appdev/modules/m3-interfaces), and [contract keys](https://docs.canton.network/appdev/modules/m3-contract-keys).
-- [Composition and Design Patterns](https://docs.canton.network/appdev/modules/m3-design-patterns): Concepts like propose/accept, delegation, role contracts that separate working Daml from elegant Daml.
-- [Daml Patterns (2.x)](https://docs.daml.com/daml/patterns.html): the original pattern catalogue, with fuller worked examples.
+- [Composition and Design Patterns](https://docs.canton.network/appdev/modules/m3-design-patterns): concepts like propose/accept, delegation, role contracts that separate working Daml from elegant Daml.
+- [Daml Patterns (2.x)](https://docs.daml.com/daml/patterns.html): the original pattern catalog, with fuller worked examples.
 - [Testing Daml Contracts](https://docs.canton.network/appdev/modules/m3-testing): Daml Script as a test harness, including multi-party scenarios.
 - [Working with Time](https://docs.canton.network/appdev/modules/m3-working-with-time): ledger time vs. record time, and why naive time handling breaks under contention.
 - [Training and Certification](https://www.digitalasset.com/training-and-certification): Digital Asset's structured path, including the Daml Fundamentals exam.
 - [The structure and flow of Daml smart contracts](https://blog.digitalasset.com/blog/-daml-smart-contract-structure-part-1): two-part article separating the static shape of a contract from its runtime behavior. ([part 2](https://blog.digitalasset.com/blog/-daml-smart-contract-structure-part-2))
 
-
 ## Language Reference
 
 - [Daml Cheat Sheet](https://docs.daml.com/cheat-sheet/): one page, syntax and stdlib. ([source](https://github.com/digital-asset/daml-cheat-sheet))
 - [Daml Language Reference](https://docs.canton.network/appdev/reference/daml-language-reference): the syntax and semantics, authoritative.
-- [Daml Standard Library](https://docs.canton.network/appdev/reference/daml-standard-library/index): `DA.List`, `DA.Map`, `DA.Text`, `DA.Time` and the rest, module by module.
+- [Daml Standard Library](https://docs.canton.network/appdev/reference/daml-standard-library/index): `DA.List`, `DA.Map`, `DA.Text`, `DA.Time`, and the rest, module by module.
 - [Prelude](https://docs.canton.network/appdev/reference/daml-standard-library/prelude): what's in scope without importing anything.
 - [Daml.Script](https://docs.canton.network/appdev/reference/daml-script/daml-script): the API you write tests and ledger-initialization scripts against.
 - [Daml-LF Reference](https://docs.canton.network/appdev/reference/daml-lf-reference): the intermediate representation Daml compiles to. Relevant once you care about package identity and upgrade compatibility.
@@ -70,17 +68,18 @@ This document also links to older documentation sites ([docs.daml.com](https://d
 The formal model is worth reading properly, especially the authorization and privacy parts.
 
 - [The Ledger Model](https://docs.canton.network/overview/learn/ledger-model): transactions as trees, with authorization rules over the nodes.
-- [Privacy Model Explained](https://docs.canton.network/overview/learn/privacy-model): subtransaction privacy i.e. who learns which parts of a transaction, and why.
+- [Privacy Model Explained](https://docs.canton.network/overview/learn/privacy-model): subtransaction privacy, i.e., who learns which parts of a transaction, and why.
 - [Privacy Model for App Developers](https://docs.canton.network/appdev/deep-dives/privacy-model): privacy model's design consequences for your app.
-- [How Transactions Work](https://docs.canton.network/overview/learn/how-transactions-work): submissions, commits and confirmations.
+- [How Transactions Work](https://docs.canton.network/overview/learn/how-transactions-work): submissions, commits, and confirmations.
 - [Two-Layer Consensus](https://docs.canton.network/overview/learn/two-layer-consensus): how Canton separates ordering from validation.
 - [Trust Model Overview](https://docs.canton.network/overview/learn/trust-model): what each participant has to trust, and what it doesn't.
 - [Composing Multi-Party Workflows](https://docs.canton.network/appdev/deep-dives/composition-multi-party): why Daml workflows compose across organizations that don't trust each other.
 - [Explicit Contract Disclosure](https://docs.canton.network/appdev/deep-dives/explicit-contract-disclosure): handing a contract to a non-stakeholder without making them an observer.
+- [Daml Ledger Model (2.x)](https://docs.daml.com/concepts/ledger-model/index.html): the formal treatment of transactions, authorization, and privacy. Dense, and worth it.
 
 ## Tooling
 
-Check the [official Canton developer tooling site](https://dev-hub.canton.foundation/) first. Developer tools, SDKs, APIs, and AI Infrastructure for Building on Canton Network. To get your projects included, [their repo](https://github.com/canton-network-devs/Canton-Developer-Hub) is open to PRs.
+Check the [official Canton developer tooling site](https://dev-hub.canton.foundation/) first: developer tools, SDKs, APIs, and AI infrastructure for building on Canton Network. To get your projects included, [their repo](https://github.com/canton-network-devs/Canton-Developer-Hub) is open to PRs.
 
 - [dpm](https://docs.canton.network/sdks-tools/cli-tools/dpm): the CLI: scaffolding, builds, tests, codegen, SDK version management. Replaces the `daml` assistant from SDK 3.5 on. ([repo](https://github.com/digital-asset/dpm))
 - [Daml SDK](https://docs.canton.network/sdks-tools/sdks/daml-sdk): compiler, Daml Script runner, and sandbox, installed via `dpm`.
@@ -92,14 +91,13 @@ Check the [official Canton developer tooling site](https://dev-hub.canton.founda
 - [Debugging Tools](https://docs.canton.network/appdev/tooling/debugging-tools) and [Debugging with lnav](https://docs.canton.network/appdev/quickstart/lnav): for when the logs are the only evidence you have.
 - [Troubleshooting Cheat Sheet](https://docs.canton.network/appdev/troubleshooting): symptom-to-cause table. Pairs with the [common issues FAQ](https://docs.canton.network/appdev/faq).
 - [Seaport](https://devnet.seaport.to/): hosted environment for building and deploying Daml without a local toolchain.
-- [daml-lint](https://github.com/OpenZeppelin/daml-lint): OpenZeppelin's static analyser, doing for Daml roughly what Slither does for Solidity: unguarded division, unbounded decimals, missing `ensure` clauses. Explicitly experimental.
+- [daml-lint](https://github.com/OpenZeppelin/daml-lint): OpenZeppelin's static analyzer, doing for Daml roughly what Slither does for Solidity: unguarded division, unbounded decimals, missing `ensure` clauses. Explicitly experimental.
 - [daml.nvim](https://github.com/Sengoku11/daml.nvim): Neovim support with LSP, inline script results, and Tree-sitter highlighting. The only serious alternative to the VS Code extension.
 - [CantonTrace](https://github.com/justmert/cantontrace): local debugging UI: ACS inspector, transaction tree with per-party privacy analysis, and step-through of the Daml engine. Fills a genuine gap in the official toolchain.
 - [daml-fuzz-canton](https://github.com/fronow/daml-fuzz-canton): property-based fuzzer. You declare the invariants; it generates multi-party transaction sequences trying to break them, covering authorization, privacy, and value conservation. Proof of concept, and the invariant categories are a useful checklist even if you don't run it.
 - [Mewt](https://github.com/trailofbits/mewt): mutation testing with Daml support, including mutants that swap controllers and signatories. Reach for it when Daml's choice-level coverage says 100% and you want to know what that is worth. ([announcement](https://blog.trailofbits.com/2026/07/08/mutation-testing-comes-to-daml/))
 - [daml-security-framework](https://github.com/1D0n/daml-security-framework): proof-of-concept static scanner and a vulnerability taxonomy with worked examples, such as non-consuming choices with side effects. Early; the taxonomy currently carries more value than the scanner.
 - [Decentralization Manager](https://github.com/DLC-link/decentralization-manager): runs a decentralized party across multiple participants: threshold governance, coordinated onboarding, DAR deployment with multi-party signing, and membership votes. For when a single operator holding the party's keys is not acceptable.
-- [Canton Security 101](https://scauditstudio.com/tools/canton-security101): A Canton-focused cybersecurity guide covering DAML development, web applications, and operational security. Learn about secure dapp development.
 
 ## SDKs and Bindings
 
@@ -107,7 +105,7 @@ Check the [official Canton developer tooling site](https://dev-hub.canton.founda
 - [gRPC Ledger API](https://docs.canton.network/sdks-tools/api-reference/ledger-api-services): the full API, including event streaming.
 - [Wallet SDK](https://docs.canton.network/sdks-tools/sdks/wallet-sdk): TypeScript, for party management, transfers, and transaction signing.
 - [Wallet Gateway](https://github.com/canton-network/wallet): dApp-side SDK and OpenRPC spec for talking to Canton wallets from a frontend.
-- [PartyLayer](https://github.com/PartyLayer/PartyLayer): CIP-0103 wallet abstraction. One integration covers Console, Loop, Cantor8, Nightly and the rest, with React hooks and a signed registry so wallet identities can't be spoofed. MIT. ([docs](https://partylayer.xyz))
+- [PartyLayer](https://github.com/PartyLayer/PartyLayer): CIP-0103 wallet abstraction. One integration covers Console, Loop, Cantor8, Nightly, and the rest, with React hooks and a signed registry so wallet identities can't be spoofed. MIT. ([docs](https://partylayer.xyz))
 - [dazl](https://github.com/digital-asset/dazl-client): Python Ledger API client. ([PyPI](https://pypi.org/project/dazl/))
 - [go-daml](https://github.com/noders-team/go-daml): Go client with a type-safe code generator that reads `.dar` files.
 - [c7_ledger](https://github.com/C7-Digital/c7_ledger): actively maintained drop-in replacements for `@daml/ledger` and `@daml/react`.
@@ -117,10 +115,10 @@ Check the [official Canton developer tooling site](https://dev-hub.canton.founda
 
 - [Daml Finance](https://github.com/digital-asset/daml-finance): instruments, holdings, settlement, and lifecycling. Don't model a financial asset from scratch before reading this. ([docs](https://docs.daml.com/daml-finance/index.html))
 - [daml-ctl](https://github.com/digital-asset/daml-ctl): small control-flow helpers ported from Haskell.
-- [Canton Token Template](https://github.com/OpenZeppelin/canton-token-template): Starting point for a CIP-56 compliant token registry, by OpenZeppelin.
+- [Canton Token Template](https://github.com/OpenZeppelin/canton-token-template): starting point for a CIP-56-compliant token registry, by OpenZeppelin.
 - [canton-stablecoin](https://github.com/OpenZeppelin/canton-stablecoin): extends the token template above with a CDP vault system: overcollateralization, minting, liquidation, stability fees, plus tests for the security invariants. Explicitly experimental.
 - [daml-tokenization-toolkit](https://github.com/SynfiniDLT/daml-tokenization-toolkit): tokenization and settlement built on Daml Finance, by ASX Operations.
-- [account-hierarchy](https://github.com/SynfiniDLT/account-hierarchy): custody and account-hierarchy modelling for solving the nested-ownership problem.
+- [account-hierarchy](https://github.com/SynfiniDLT/account-hierarchy): custody and account-hierarchy modeling for solving the nested-ownership problem.
 - [daml-nft](https://github.com/SynfiniDLT/daml-nft): small NFT library.
 - [Catalyx Package Manager](https://apps.catalyx.solutions/marketplace): community marketplace for reusable Daml packages.
 
@@ -148,22 +146,22 @@ Check the [official Canton developer tooling site](https://dev-hub.canton.founda
 
 ## Upgrades and Production
 
-Daml packages are immutable and content-addressed, which complicates the upgrades. 
+Daml packages are immutable and content-addressed, which complicates the upgrades.
 
 - [Smart Contract Upgrades Overview](https://docs.canton.network/appdev/modules/m6-overview): start here, then [writing your first upgrade](https://docs.canton.network/appdev/modules/m6-writing-first-upgrade).
 - [Upgrade Compatibility](https://docs.canton.network/appdev/modules/m6-upgrade-compatibility) and [Limitations](https://docs.canton.network/appdev/modules/m6-limitations): what you're allowed to change, and what you'll regret.
 - [Smart Contract Upgrade (SCU) deep dive](https://docs.canton.network/appdev/deep-dives/smart-contract-upgrade): about the upgrade mechanism itself.
 - [Package Selection](https://docs.canton.network/appdev/modules/m6-package-selection) and [Package Naming](https://docs.canton.network/appdev/modules/m6-package-naming): naming is extra important to get right early.
 - [Security Best Practices](https://docs.canton.network/appdev/modules/m7-security): Daml-specific security practices.
-- [Performance Best Practices](https://docs.canton.network/appdev/modules/m7-performance) and [Performance Optimization](https://docs.canton.network/appdev/deep-dives/performance-optimization).
-- [Error Handling](https://docs.canton.network/appdev/modules/m7-error-handling): retryable vs real failures.
+- [Performance Best Practices](https://docs.canton.network/appdev/modules/m7-performance) and [Performance Optimization](https://docs.canton.network/appdev/deep-dives/performance-optimization)
+- [Error Handling](https://docs.canton.network/appdev/modules/m7-error-handling): retryable vs. real failures.
 - [Application Architecture Design](https://docs.canton.network/appdev/deep-dives/app-architecture-design): how to design your application stack (frontend, Daml models, backend).
-- [Observability](https://docs.canton.network/appdev/modules/m4-observability) and [Open Tracing](https://docs.canton.network/appdev/deep-dives/open-tracing).
+- [Observability](https://docs.canton.network/appdev/modules/m4-observability) and [Open Tracing](https://docs.canton.network/appdev/deep-dives/open-tracing)
 
 ## The Canton Ecosystem
 
 - [Canton Network](https://www.canton.network/): the network itself, and [its problem statement](https://docs.canton.network/overview/understand/the-problem).
-- [Canton Network in 5 Minutes](https://docs.canton.network/overview/understand/five-minute-overview): tldr.
+- [Canton Network in 5 Minutes](https://docs.canton.network/overview/understand/five-minute-overview): TL;DR.
 - [Glossary](https://docs.canton.network/overview/understand/glossary)
 - [Canton Improvement Proposals](https://github.com/canton-foundation/cips): where protocol and standard proposals are developed. For instance, [CIP-56](https://github.com/canton-foundation/cips/blob/main/cip-0056/cip-0056.md) defines the token standard.
 - [Token Standard](https://docs.canton.network/appdev/deep-dives/token-standard): about the CIP-56.
@@ -173,7 +171,7 @@ Daml packages are immutable and content-addressed, which complicates the upgrade
 - [Canton](https://github.com/digital-asset/canton): the protocol implementation, in Scala.
 - [Daml](https://github.com/digital-asset/daml): the compiler, standard library, and language runtime. Apache-2.0.
 - [Canton Hub](https://unityhub.dev/canton): community resource hub covering education, dev, and validator material.
-- [Onboarding & Dev Fund Guide](https://canton-101.vercel.app): community walkthrough of the devnet-to-testnet-to-mainnet progression, and how Dev Fund proposals actually get approved.
+- [Onboarding & Dev Fund Guide](https://canton-101.vercel.app): community walkthrough of the DevNet-to-TestNet-to-MainNet progression, and how Dev Fund proposals actually get approved.
 
 ## Data and Explorers
 
@@ -196,16 +194,15 @@ Daml packages are immutable and content-addressed, which complicates the upgrade
 - [Canton: A Daml based ledger interoperability protocol](https://www.canton.io/publications/canton-whitepaper.pdf): the original 2020 technical paper, and considerably more precise than the marketing pages that superseded it.
 - [Canton Network whitepapers](https://www.canton.network/whitepaper): the full set, including the Canton Network paper and the Canton Coin papers.
 - [Polyglot Canton](https://www.canton.network/hubfs/Canton%20Network%20Files/whitepapers/Polyglot_Canton_Whitepaper_11_02_25.pdf): the case for opening Canton to languages beyond Daml, running Solidity and others over WebAssembly.
-- [Daml Ledger Model (2.x)](https://docs.daml.com/concepts/ledger-model/index.html): the formal treatment of transactions, authorization, and privacy. Dense, and worth it.
 
 ### Academic Research
 
 - [Access Control Verification in Smart Contracts Using Colored Petri Nets](https://doi.org/10.3390/computers13110274): Al-Azzoni & Iqbal, *Computers*, 2024. Parses Daml templates into Petri nets and model-checks the access control. Open access.
 - [Smart contract life-cycle management](https://doi.org/10.3389/fbloc.2023.1276233): Mustafa, McGibney & Rea, *Frontiers in Blockchain*, 2024. A verification framework for Daml contracts, including a type-safety checker for access-control and IDOR-style flaws. Open access.
-- [Visual Smart Contracts for DAML](https://doi.org/10.1007/978-3-031-09843-7_8): Heckel et al., ICGT 2022. Graph-transformation semantics for Daml, aimed at making contract behaviour visually inspectable.
+- [Visual Smart Contracts for DAML](https://doi.org/10.1007/978-3-031-09843-7_8): Heckel et al., *ICGT*, 2022. Graph-transformation semantics for Daml, aimed at making contract behavior visually inspectable.
 - [Dynamic Role-Based Access Control Scenarios for Smart Contracts](https://www.jot.fm/contents/issue_2025_02/a4.html): Al-Azzoni, Heckel & Erum, *Journal of Object Technology*, 2025. Generating Daml access-control tests via graph rewriting. Open access.
-- [Modelling Multi-Party Role-Based Access Control Policies for iContractML Smart Contracts](https://doi.org/10.1109/asew60602.2023.00018): Al-Azzoni & Heckel, ASEW 2023. Models RBAC once, then maps it to both Solidity and Daml.
-- [Decentralized Oracle Networks (DONs) Provision for DAML Smart Contracts](https://doi.org/10.1007/978-3-031-45155-3_36): Mustafa et al., 2023. Integrating Oracles into Daml.
+- [Modelling Multi-Party Role-Based Access Control Policies for iContractML Smart Contracts](https://doi.org/10.1109/asew60602.2023.00018): Al-Azzoni & Heckel, *ASEW*, 2023. Models RBAC once, then maps it to both Solidity and Daml.
+- [Decentralized Oracle Networks (DONs) Provision for DAML Smart Contracts](https://doi.org/10.1007/978-3-031-45155-3_36): Mustafa et al., 2023. Integrating oracles into Daml.
 
 ## Community articles
 
@@ -217,14 +214,15 @@ Daml packages are immutable and content-addressed, which complicates the upgrade
 - [DAML Development Guide](https://pixelplex.io/blog/daml-development-guide/)
 - [Daml Masterclass](https://medium.com/daml-masterclass/full-stack-developer-happiness-a1a122ebd8de): long-running series on full-stack Daml, including [driving the ledger from Rust](https://medium.com/daml-masterclass/rust-daml-a-biz-friendly-smart-contract-platform-deserves-a-biz-friendly-client-language-ddb74922a263).
 - [Canton Network Learning Hub](https://cantonnews.org/learn): four levels of question-and-answer material, from what Canton is up to transaction mechanics and CIP-56. The developer track is levels 2 and 3.
+- [Canton Security 101](https://scauditstudio.com/tools/canton-security101): three-part guide from audit firm SC Audit Studio covering Daml authorization patterns, web-layer security, and opsec.
 
 ## Community Forums
 
 - [Canton Network Forum](https://forum.canton.network/): formerly the Daml forum, and still a place where the language questions get answered by people who wrote the compiler.
-- [Official Discord](https://discord.com/invite/canton).
+- [Official Discord](https://discord.com/invite/canton)
 - [Official Telegram](https://t.me/CantonNetwork1)
 - [Stack Overflow `daml` tag](https://stackoverflow.com/questions/tagged/daml): not active, but the old language-specific answers are often still correct.
-- [GitHub `daml` topic](https://github.com/topics/daml): for finding projects not catalogued anywhere else.
+- [GitHub `daml` topic](https://github.com/topics/daml): for finding projects not cataloged anywhere else.
 - [Digital Asset on YouTube](https://www.youtube.com/@digitalassetcom): talks and recorded sessions.
 - [Canton Network blog](https://www.canton.network/blog)
 
